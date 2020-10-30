@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::post('import-excel', 'App\Http\Controllers\Excel\ExcelController@importExcel')->name('import-excel');
